@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Q&A Countdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="container">
+        <!-- Question 1 -->
+        <div id="q1" class="step">
+            <h1>Do you come today?</h1>
+            <button onclick="handleQ1('yes')">Yes</button>
+            <button onclick="handleQ1('no')">No</button>
+        </div>
+
+        <!-- Question 2 -->
+        <div id="q2" class="step" style="display:none;">
+            <h1>Do you want to learn?</h1>
+            <button onclick="handleQ2('yes')">Yes</button>
+            <button onclick="handleQ2('no')">No</button>
+        </div>
+
+        <!-- Question 3 -->
+        <div id="q3" class="step" style="display:none;">
+            <h1>How long are you coming?</h1>
+            <input type="number" id="timeInput" placeholder="Enter time in minutes">
+            <button onclick="handleQ3()">Start Countdown</button>
+        </div>
+
+        <!-- Countdown Display -->
+        <div id="countdown" style="display:none;">
+            <h1>Time remaining:</h1>
+            <div id="timer-display"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
